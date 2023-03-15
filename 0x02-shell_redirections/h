@@ -1,4 +1,5 @@
-root:*:0:0:System Administrator:/var/root:/bin/sh
-daemon:*:1:1:System Services:/var/root:/usr/bin/false
-_cvmsroot:*:212:212:CVMS Root:/var/empty:/usr/bin/false
-heloo
+SyslogFacility AUTHPRIV
+AuthorizedKeysFile  .ssh/authorized_keys
+UsePrivilegeSeparation sandbox # Default for new installations.
+AcceptEnv LANG LC_*
+Subsystem   sftp    /usr/libexec/sftp-server
