@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -o ":*/[a-z]*:" <<< "$PATH" |  wc -w
+grep -o "\/[a-z]*:\|:*\/[a-z]*$" <<<"$PATH" | wc -w
